@@ -7,8 +7,8 @@
 // a = -9; b = -3 -> max = -3
 
 Console.WriteLine("напишите любые два целых числа");
-int namber1 = Convert.ToInt32(Console.ReadLine());
-int namber2 = Convert.ToInt32(Console.ReadLine());
-if (namber1 > namber2) Console.WriteLine($"{namber1} максимальное число");
-else if (namber1 == namber2) Console.WriteLine($"{namber1} и {namber2}  равные числа");
-else Console.WriteLine($"{namber2} максимальное число");
+int number1 = Convert.ToInt32(Console.ReadLine());
+int number2 = Convert.ToInt32(Console.ReadLine());
+if (number1 > number2) Console.WriteLine($"{number1} максимальное число");
+else if (number1 == number2) Console.WriteLine($"{number1} и {number2}  равные числа");
+else Console.WriteLine($"{number2} максимальное число");
