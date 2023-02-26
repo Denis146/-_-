@@ -5,11 +5,12 @@
 Console.WriteLine("введите номер четверти от 1 до 4");
 Console.Write ("Quater: ");
 int numquater = Convert.ToInt32(Console.ReadLine());
+// string numquater = Console.ReadLine();
 
 string range = NumQuater(numquater);
 Console.WriteLine($"дипазон указнаооной четверти: {range}");
 
-
+// метод:
 string NumQuater(int num)
 {
     if  (num == 1) return "x > 0, y > 0";
