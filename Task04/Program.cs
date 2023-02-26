@@ -12,5 +12,5 @@ int max;
 if (num1 >= num2) max = num1;
 else max = num2;
 if (num3 >= max) max = num3;
-else max = max;
+// else max = max;
 Console.WriteLine($"максимальное число {max}");
