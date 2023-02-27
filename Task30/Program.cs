@@ -12,10 +12,11 @@ PrintArray(array);
 
 int[] FillArray(int num)
 {
+    Random rand = new Random();
     int[] array = new int[num];
     for (int i = 0; i < num; i++)
     {
-        array[i] = new Random().Next(0, 2);
+        array[i] = rand.Next(0, 2);
     }
     return array;
 }
