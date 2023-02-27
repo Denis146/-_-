@@ -18,6 +18,7 @@ Console.WriteLine($"Случайное число из отрезка 10-99 => {
 // реализация с помощбю функции
 int maxDigit = MaxDigit(number);
 Console.WriteLine($"Наибольшая цифра числа -> {maxDigit}");
+
 int MaxDigit(int num) // num = number  здесь создается копия
 {
     int firstDigit = num / 10;
