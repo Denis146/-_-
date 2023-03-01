@@ -29,7 +29,6 @@ void PrintArray(int[] arr)
     }
 }
 
-
 // другой вывод со скобками [ , , , ]
 // 
 // void PrintArray(int[] arr)
