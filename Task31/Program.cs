@@ -38,13 +38,25 @@ int[] GetSumPositiveNegativeElem(int[] arr)            // найдем сумм�
         if (arr[i] < 0) sumNegative += arr[i];
         else sumPositive += arr[i];
     }
-    return new int[]{sumNegative, sumPositive};
+    return new int[] { sumNegative, sumPositive };
 }
 
 int[] array = CreateArrayRndInt(12, -9, 9);         // теперь вызываем наш метод
 PrintArray(array);
 Console.WriteLine();                        // чтобы при выводе след. значений уйти на новую строку
-int[] sumPositiveNegativeElem = GetSumPositiveNegativeElem (array);     // здесь будет массив, который выводит два значения, сумму отрицательных и положительных
+int[] sumPositiveNegativeElem = GetSumPositiveNegativeElem(array);     // здесь будет массив, который выводит два значения, сумму отрицательных и положительных
 
 Console.WriteLine($"Сумма положительных чисел = {sumPositiveNegativeElem[1]}");
 Console.WriteLine($"Сумма отрицательных чисел = {sumPositiveNegativeElem[0]}");
+
+// если выводить суммы отдельнымим методами, будет так:
+// int GetSumPositiveElem(int[] arr)            
+// {
+//     int sumPositive = 0;
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if (arr[i] > 0) sumPositive += arr[i];
+//     }
+//     return sumPositive;
+// }
+// и такой же метод для отрицательных
