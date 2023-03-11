@@ -31,19 +31,18 @@ void PrintMatrix(int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],5}");         // , 3} это форматирование строк, отступ 3 знака
-            else Console.WriteLine($"{matrix[i, j],5}");
+            Console.Write($"{matrix[i, j],5}");
         }
+        Console.WriteLine();
     }
 }
 
 void ReplacePositivElem(int[,] matrix)               // нужно заменить элементы, значи создавать новый массив не нужно, значит только передаем void
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i += 2)   // можно прописать i+=2, тогда будем сразу гонять по четным значениям
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1); j +=2)
         {
-            if (i / 2 == 0 && j / 2 == 0) 
             matrix[i, j] *= matrix[i, j];               // *= matrix[i, j] то же что matrix[i, j] * matrix[i, j]
         }
     }
