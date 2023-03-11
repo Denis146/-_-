@@ -5,6 +5,8 @@
 
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
+// без массива
+
 Console.Write("Введите k1: ");
 var k1 = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите b1: ");
