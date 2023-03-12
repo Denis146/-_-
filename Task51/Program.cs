@@ -36,19 +36,32 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
+// первый вариант решения
+// int SumElemsMainDiagonal(int[,] matrix)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < matrix.GetLength(0); i++)    // внешний цикл, для прохода по строкам //  matrix.GetLength(0) или rows
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             if (i == j) sum += matrix[i, j];
+//         }
+//     }
+//     return sum;
+// }
+
+// второй вариант решения
 int SumElemsMainDiagonal(int[,] matrix)
 {
     int sum = 0;
-    for (int i = 0; i < matrix.GetLength(0); i++)    // внешний цикл, для прохода по строкам //  matrix.GetLength(0) или rows
+    int size = matrix.GetLength(0);
+    if (size > matrix.GetLength(1)) size = matrix.GetLength(1);
+    for (int i = 0; i < size; i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (i==j) sum += matrix[i, j];
-        }
+        sum += matrix[i, i];
     }
     return sum;
 }
-
 
 int[,] array2d = CreateMatrixRndInt(4, 4, -10, 10);
 PrintMatrix(array2d);
