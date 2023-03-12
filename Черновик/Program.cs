@@ -1,62 +1,23 @@
-﻿Console.Write("Введите числа через запятую: ");
-int[] numbers = StringToNum(Console.ReadLine());
-PrintArray(numbers);
-int sum = 0;
-for (int i = 0; i < numbers.Length; i++)
+﻿Random random = new Random();
+int[,] arr = new int[random.Next(1, 10), random.Next(1, 10)];
+for (int i = 0; i < arr.GetLength(0); i++)
 {
-    if (numbers[i] > 0)
+    for (int j = 0; j < arr.GetLength(1); j++)
     {
-        sum++;
+        arr[i, j] = random.Next(1, 10);
+        Console.Write(arr[i, j] + " ");
     }
+    Console.WriteLine();
 }
-Console.WriteLine();
-Console.WriteLine($"количество значений больше 0 = {sum}");
-
-
-int[] StringToNum(string input)
+Console.WriteLine("---------------------------");
+Console.WriteLine(arr.GetLength(0));
+for (int j = 0; j < arr.GetLength(1); j++)
 {
-    int count = 1;
-    for (int i = 0; i < input.Length; i++)
+    double sum = 0;
+    for (int i = 0; i < arr.GetLength(0); i++)
     {
-        if (input[i] == ',')
-        {
-            count++;
-        }
+        sum += arr[i, j];
     }
-
-    int[] numbers = new int [count];
-    int index = 0;
-
-    for (int i = 0; i < input.Length; i++)
-    {
-        string temp = "";
-
-        while (input [i] != ',')
-        {
-        if(i != input.Length - 1)
-        {
-            temp += input [i].ToString();
-            i++;
-        }
-        else
-        {
-            temp += input [i].ToString();
-            break;
-        }
-        }
-        numbers[index] = Convert.ToInt32(temp);
-        index++;
-    }
-    return numbers;
+    Console.Write($"{ sum / arr.GetLength(0)} ");
 }
-
-
-void PrintArray(int[] array)
-{
-    Console.Write("[ ");
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
-    }
-    Console.Write("]");
-}
+Console.ReadLine();
