@@ -39,7 +39,6 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-
 // находим элемент с минимальным значением
 int[] MinElem(int[,] matrix)
 {
@@ -91,4 +90,6 @@ int [,] delRowColumn = DeleteRowColumn (array2d, minElem);
 
 PrintMatrix(delRowColumn);
 
-
+// комментарий учителя:
+// В задаче 59 новую матрицу нужно заполнять из исходной, сейчас в коде новая заполняется из новой.
+// Нужно испраить
