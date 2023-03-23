@@ -12,6 +12,14 @@
 //      n:= n - 1
 //    вернуть m + 1
 
+// функция ack(n, m)
+//    если n = 0
+//      вернуть m + 1
+//    иначе, если m = 0
+//      вернуть ack (n - 1, 1)
+//    еще
+//      вернуть ack(n - 1, ack (n, m - 1))
+
 Console.WriteLine("введите положительное число M ");
 int numberM = int.Parse(Console.ReadLine());
 Console.WriteLine("введите положительное число N ");
