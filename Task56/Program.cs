@@ -73,7 +73,7 @@ static void SumStringMatrix(int[,] matrix)
 int[,] array2d = CreateMatrixRndInt(3, 3, 1, 5);
 PrintMatrix(array2d);
 Console.WriteLine();
-
+ 
 SumStringMatrix(array2d);
 
 // комментарий учителя:
